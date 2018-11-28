@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: gray;
+}
+.banner{
+    background: url(../img/people-3755342_1920.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+}
+.bcon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+}
+.bcon h1{
+    font-size: 40px;
+    animation-name: hanimate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode:backwards;
+}
+.bcon p{
+    font-size: 15px;
+    padding: 50px 0;
+}
+.overlay{
+    width: 100%;
+    height: 100vh;
+    background: #00800033;
+    position: absolute;
+}
+.bcon a{
+
+    padding: 10px 30px;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-size: 400%;
+    border-radius: 30px;
+    animation-name: wow;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    box-sizing: border-box;
+}
+
+       
+
+@keyframes wow {
+    0%{
+       background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+       color: red;
+       
+    }
+     100%{
+       background: linear-gradient(90deg, #f441a5 , #ffeb3b, #03a9f4,#03a9f4);
+      color: green;
+      
+    }
+}
+@keyframes hanimate{
+    0%{
+        transform: translateY(0%);
+        color: green;
+    }
+    50%{
+        transform: translateY(0%);
+        color: red;
+    }
+    100%{
+        transform: translateY(100%);
+        color: blue;
+    }
+}
+.profile{
+    width: 1000px;
+    margin: 0 auto;
+}
+.col-2{
+    width: 50%;
+    float: left;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.hvr{
+    position: relative;
+    width: 100%;
+}
+.hvr img{max-width: 100%;}
+.hvr:after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #9a392e8a;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+.hvr:hover:after{
+    opacity: 1;
+}
+.fb{
+    
+position: absolute;
+    
+top: 60%;
+    
+left: 45%;
+    
+transform: translate(-45%,-60%);
+    
+color: blue;
+    
+font-size: 50px;
+    
+z-index: 1;
+    
+opacity: 0;
+transition: all 0.4s ease;
+}
+.mobile{
+    position: absolute;
+    top: 60%;
+    left: 60%;
+    transform: translate(-60%,-60%);
+    color: black;
+    z-index: 1;
+    font-size: 50px;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+.hvr:hover .fb{
+    opacity: 1;
+    top:50%;
+    transform: translate(-45%,-50%);
+}
+.hvr:hover .mobile{
+    opacity: 1;
+    top:50%;
+    transform: translate(-60%,-50%);
+
+}
